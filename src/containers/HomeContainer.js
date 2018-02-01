@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import Home from '../components/Home';
+import {getPosts} from '../actions/post.action';
 
 const mapStateToProps = (state) => {
     return {
@@ -12,8 +13,8 @@ const dispatchToProps = (dispatch)=> ({
 });
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => ({
-    ...dispatchProps,
-    ...stateProps
+    ...stateProps,
+    getPosts: () => dispatchProps.dispatch(getPosts())
 });
 
 export default connect(mapStateToProps, dispatchToProps, mergeProps)(Home);

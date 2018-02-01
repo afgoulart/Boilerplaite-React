@@ -41,6 +41,8 @@
     "webpack-dev-server": "1.14.1"
   },
   "dependencies": {
+    "axios": "^0.17.1",
+    "es6-promise": "^4.2.4",
     "prop-types": "^15.6.0",
     "react": "15.2.1",
     "react-dom": "15.2.1",

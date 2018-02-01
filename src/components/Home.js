@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 
 class App extends Component {
+  componentWillMount() {
+    this.props.getPosts();
+  }
+
   render() {
     return (
       <div>
